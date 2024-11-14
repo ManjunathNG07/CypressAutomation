@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-14T06:17:46.627Z",
+    "end": "2024-11-14T06:17:52.250Z",
+    "duration": 5623,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bd357207-c315-4eac-a894-dd9cb9b18e2c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\CaptureScreenshotAndVideos.cy.js",
+      "file": "cypress\\e2e\\CaptureScreenshotAndVideos.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "320cf00e-bc12-4f2a-a843-fc95425cb95b",
+          "title": "MyTestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Screenshot ",
+              "fullTitle": "MyTestSuite Screenshot ",
+              "timedOut": null,
+              "duration": 2152,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\CaptureScreenshotAndVideos.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\CaptureScreenshotAndVideos.cy.js\\\\MyTestSuite -- Screenshot (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://demo.opencart.com/');\n/*   cy.screenshot('homepage')\n   cy.wait(5000)\n   cy.get(\"img[title='Your Store']\").screenshot('logo')\n*/\ncy.wait(5000);\ncy.get('body > main:nth-child(4) > div:nth-child(1) > nav:nth-child(1) > div:nth-child(3) > ul:nth-child(1) > li:nth-child(7) > a:nth-child(1)').click();\ncy.get(\"div[id='content'] h2\").should('have.text', 'Tablets');",
+              "err": {
+                "message": "ReferenceError: bootstrap is not defined",
+                "estack": "ReferenceError: bootstrap is not defined\n    at HTMLDocument.<anonymous> (https://demo.opencart.com/:353:5)\n    at e (https://demo.opencart.com/catalog/view/javascript/jquery/jquery-3.7.1.min.js:2:27028)\n    at t (https://demo.opencart.com/catalog/view/javascript/jquery/jquery-3.7.1.min.js:2:27330)\n    at o (https://demo.opencart.com/:3:451)\n    at https://demo.opencart.com/:3:824",
+                "diff": null
+              },
+              "uuid": "69ec478a-f4fb-470b-814e-5d6e641c7b2d",
+              "parentUUID": "320cf00e-bc12-4f2a-a843-fc95425cb95b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "69ec478a-f4fb-470b-814e-5d6e641c7b2d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2152,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
